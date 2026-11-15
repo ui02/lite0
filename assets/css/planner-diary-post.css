@@ -397,7 +397,7 @@ body.diary-post-page article.page .diary-post-info {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 8px;
   margin: 0;
   padding: 0;
