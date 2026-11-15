@@ -405,17 +405,6 @@ body.diary-post-page article.page .diary-post-info {
   border-bottom: 0px solid #dce8eb;
 }
 
-/* 各項目の配置をリセット */
-body.diary-post-page article.page .diary-post-info p {
-  display: inline-flex;
-  flex: 0 0 auto;
-  align-items: center;
-  width: auto;
-  float: none;
-  margin: 0;
-  padding: 0;
-}
-
 /* Tags: / Categories: とアイコンを非表示 */
 body.diary-post-page .diary-post-info .page__taxonomy strong {
   display: none;
@@ -449,7 +438,7 @@ body.diary-post-page .diary-post-info .page__meta {
   text-align: center;
   align-items: center;
   margin: 0;
-  padding: 6px 22px !important;
+  padding: 5px 11px;
   color: #8299a0;
   background: #fff;
   border: 1px solid #dce8eb;
