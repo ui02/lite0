@@ -1,4 +1,38 @@
 /* =========================================================
+   0. 共通フォント・カラー設定
+   ========================================================= */
+
+/* フォント */
+@font-face {
+  font-family: "Pecita";
+  src: url("../fonts/Pecita.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Holiday";
+  src: url("../fonts/Holiday.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* BabyBlue カラー */
+:root {
+  --baby-blue: #bbe2f1;
+  --blue-deep: #5b9eb8;
+  --blue-ink: #397b96;
+  --blue-pale: #eaf7fb;
+  --paper: #fff;
+  --ink: #526a73;
+  --muted: #91aab2;
+  --line: #dceef4;
+  --shadow: rgba(67, 119, 139, .16);
+}
+
+/* =========================================================
    IOLITE / DIARY POST
    Individual article pages
    ========================================================= */
