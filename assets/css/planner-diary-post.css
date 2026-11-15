@@ -379,74 +379,136 @@ body.diary-post-page .pagination .pagination--pager:hover {
 body.diary-post-page .pagination .pagination--pager.disabled {
   visibility: hidden;
 }
-/* =========================================================
-   DIARY POST / FOOTER ALIGNMENT
-   ========================================================= */
 
-/* タグ・カテゴリー・投稿日を中央に */
-body.diary-post-page article.page footer.page__meta {
-  justify-content: center;
-}
-
-/* Previous / Next ナビゲーションを中央に */
-body.diary-post-page .pagination {
-  justify-content: center;
-}
-
-/* Previous / Next ボタンの幅 */
-body.diary-post-page .pagination .pagination--pager {
-  flex: 0 1 220px;
-  text-align: center;
-}
 
 /* =========================================================
-   DIARY POST / DATE・TAGS・CATEGORIES
+   IOLITE / DIARY POST
+   HEADER INFO & PAGINATION
    ========================================================= */
 
-/* 3項目を中央に横並び */
-body.diary-post-page .diary-post-info {
+
+/* ---------------------------------------------------------
+   HEADER INFO
+   日付・タグ・カテゴリー
+   --------------------------------------------------------- */
+
+/* 3項目を横並びに配置 */
+body.diary-post-page article.page .diary-post-info {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
+  justify-content: flex-start;
   gap: 8px;
-  margin: 18px 0 28px;
+  margin: 20px 0 28px;
+  padding: 18px 0;
+  border-top: 1px solid #dce8eb;
+  border-bottom: 1px solid #dce8eb;
 }
 
-/* 日付・タグ・カテゴリーの共通設定 */
-body.diary-post-page .diary-post-info .page__meta,
-body.diary-post-page .diary-post-info .page__taxonomy {
+/* 各項目の配置をリセット */
+body.diary-post-page article.page .diary-post-info p {
   display: inline-flex;
+  flex: 0 0 auto;
   align-items: center;
+  width: auto;
+  float: none;
   margin: 0;
-  padding: 5px 11px;
-  color: #7196a2;
-  background: #f5fafb;
-  border: 1px solid #dcecf1;
-  border-radius: 3px;
-  font-size: 11px;
-  line-height: 1.5;
+  padding: 0;
 }
 
-/* Tags: / Categories: の文字とアイコンを非表示 */
+/* Tags: / Categories: とアイコンを非表示 */
 body.diary-post-page .diary-post-info .page__taxonomy strong {
   display: none;
 }
 
-/* タグ・カテゴリーのリンク */
-body.diary-post-page .diary-post-info .page__taxonomy span[itemprop="keywords"] {
+/* タグ・カテゴリーのリンクを横並びに */
+body.diary-post-page .diary-post-info span[itemprop="keywords"] {
   display: inline-flex;
   flex-wrap: wrap;
-  gap: 0;
+  gap: 8px;
 }
 
-/* リンク自体の装飾をリセット */
+/* タグ・カテゴリーのラベル */
 body.diary-post-page .diary-post-info .page__taxonomy-item {
-  display: inline;
-  padding: 0;
-  color: inherit;
-  background: none;
-  border: 0;
-  font-size: inherit;
+  display: inline-block;
+  margin: 0;
+  padding: 5px 11px;
+  color: #7196a2;
+  background: #f5fafb;
+  border: 1px solid #dce8eb;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.5;
   text-decoration: none;
+}
+
+/* 投稿日のラベル */
+body.diary-post-page .diary-post-info .page__meta {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 5px 11px;
+  color: #8299a0;
+  background: #fff;
+  border: 1px solid #dce8eb;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+
+/* ---------------------------------------------------------
+   PREVIOUS & NEXT
+   前後の記事へのナビゲーション
+   --------------------------------------------------------- */
+
+/* ナビゲーション全体を中央に */
+body.diary-post-page .pagination {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 28px 0 10px;
+  padding: 0;
+  border: 0;
+}
+
+/* Previous / Next ボタン */
+body.diary-post-page .pagination .pagination--pager {
+  flex: 0 1 220px;
+  min-width: 0;
+  margin: 0;
+  padding: 7px 13px;
+  color: #8299a0;
+  background: #fff;
+  border: 1px solid #dce8eb;
+  border-radius: 20px;
+  box-shadow: none;
+  font-size: 11px;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* ホバー */
+body.diary-post-page .pagination .pagination--pager:hover {
+  color: #65a4b9;
+  background: #f5fafb;
+  border-color: #c9e0e7;
+}
+
+/* 次の記事がない場合 */
+body.diary-post-page .pagination .pagination--pager.disabled {
+  visibility: hidden;
+}
+
+
+/* ---------------------------------------------------------
+   FOOTER
+   --------------------------------------------------------- */
+
+/* SNSシェアボタンを非表示 */
+body.diary-post-page .page__share {
+  display: none;
 }
