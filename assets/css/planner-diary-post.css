@@ -399,10 +399,10 @@ body.diary-post-page article.page .diary-post-info {
   align-items: center;
   justify-content: flex-start;
   gap: 8px;
-  margin: 20px 0 28px;
-  padding: 18px 0;
-  border-top: 1px solid #dce8eb;
-  border-bottom: 1px solid #dce8eb;
+  margin: 0;
+  padding: 0;
+  border-top: 0px solid #dce8eb;
+  border-bottom: 0px solid #dce8eb;
 }
 
 /* 各項目の配置をリセット */
@@ -498,11 +498,11 @@ body.diary-post-page .pagination .pagination--pager:hover {
   border-color: #c9e0e7;
 }
 
-/* 次の記事がない場合 */
+/* 次の記事がない場合
 body.diary-post-page .pagination .pagination--pager.disabled {
   visibility: hidden;
 }
-
+ */
 
 /* ---------------------------------------------------------
    FOOTER
