@@ -332,3 +332,45 @@ body.diary-post-page .page__share {
   display: none;
 }
 
+/* =========================================================
+   ORIGINAL FOOTER
+   ========================================================= */
+
+/* Minimal Mistakes 標準フッターを非表示 */
+body.diary-post-page .page__footer {
+  display: none;
+}
+
+/* オリジナルフッター */
+body.diary-post-page .diary-post-footer {
+  width: 100%;
+  max-width: 780px;
+  margin: 32px auto 0;
+  padding: 12px 4px 4px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-family: "Caveat", "Zen Maru Gothic", sans-serif;
+  font-size: 11px;
+  letter-spacing: .08em;
+}
+
+/* 上段 */
+.diary-post-footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.diary-post-footer-top span:last-child {
+  color: var(--blue-deep);
+  font-weight: 700;
+}
+
+/* 下段 */
+.diary-post-footer-bottom {
+  margin-top: 5px;
+  font-size: 10px;
+  text-align: right;
+  letter-spacing: .04em;
+}
