@@ -321,3 +321,15 @@ body.diary-post-page .pagination .pagination--pager.disabled {
 body.diary-post-page .page__share {
   display: none;
 }
+
+/* =========================================================
+   PAGE BACKGROUND：DIARY INDEXと統一
+   ========================================================= */
+
+body.diary-post-page {
+  background-image: url("../images/planner/background/53.gif");
+  background-size: auto;
+  background-position: top left;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
