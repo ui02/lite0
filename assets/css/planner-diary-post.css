@@ -398,3 +398,55 @@ body.diary-post-page .pagination .pagination--pager {
   flex: 0 1 220px;
   text-align: center;
 }
+
+/* =========================================================
+   DIARY POST / DATE・TAGS・CATEGORIES
+   ========================================================= */
+
+/* 3項目を中央に横並び */
+body.diary-post-page .diary-post-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 18px 0 28px;
+}
+
+/* 日付・タグ・カテゴリーの共通設定 */
+body.diary-post-page .diary-post-info .page__meta,
+body.diary-post-page .diary-post-info .page__taxonomy {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 5px 11px;
+  color: #7196a2;
+  background: #f5fafb;
+  border: 1px solid #dcecf1;
+  border-radius: 3px;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* Tags: / Categories: の文字とアイコンを非表示 */
+body.diary-post-page .diary-post-info .page__taxonomy strong {
+  display: none;
+}
+
+/* タグ・カテゴリーのリンク */
+body.diary-post-page .diary-post-info .page__taxonomy span[itemprop="keywords"] {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+/* リンク自体の装飾をリセット */
+body.diary-post-page .diary-post-info .page__taxonomy-item {
+  display: inline;
+  padding: 0;
+  color: inherit;
+  background: none;
+  border: 0;
+  font-size: inherit;
+  text-decoration: none;
+}
