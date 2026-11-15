@@ -446,6 +446,7 @@ body.diary-post-page .diary-post-info .page__taxonomy-item {
 /* 投稿日のラベル */
 body.diary-post-page .diary-post-info .page__meta {
   display: inline-flex;
+  text-align: center;
   align-items: center;
   margin: 0;
   padding: 5px 11px;
