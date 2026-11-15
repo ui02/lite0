@@ -51,7 +51,7 @@ body.diary-post-page {
 
 /* =========================================================
    1. PAGE LAYOUT
-   記事ページ全体のレイアウト
+   ノート風のページ全体
    ========================================================= */
 
 /* サイトヘッダーを非表示 */
@@ -64,26 +64,50 @@ body.diary-post-page .sidebar {
   display: none;
 }
 
-/* 記事エリアを中央に配置 */
+/* ページ全体 */
 body.diary-post-page #main {
   display: block;
+  width: 100%;
   max-width: 100%;
   margin: 0 auto;
   padding: 40px 24px;
   box-sizing: border-box;
 }
 
-/* 記事本体 */
+/* 白いノート用紙 */
 body.diary-post-page article.page {
+  display: block;
   float: none;
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
+  padding: 32px 38px 26px;
+  box-sizing: border-box;
+
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 31px,
+      rgba(187, 226, 241, .20) 32px,
+      transparent 33px
+    ),
+    #fff;
+
+  border: 1px solid rgba(91, 158, 184, .28);
+  border-radius: 9px;
+  box-shadow:
+    0 22px 55px var(--shadow),
+    0 3px 8px rgba(67, 119, 139, .08);
 }
 
 /* 記事内側 */
 body.diary-post-page .page__inner-wrap {
+  display: block;
+  float: none;
   width: 100%;
+  max-width: none;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -94,7 +118,6 @@ body.diary-post-page .diary-post {
   margin: 0 auto;
   box-sizing: border-box;
 }
-
 
 /* =========================================================
    2. ARTICLE HEADER
@@ -324,17 +347,13 @@ body.diary-post-page .pagination .pagination--pager.disabled {
 
 /* =========================================================
    6. FOOTER
-   フッター
+   オリジナルのノート風フッター
    ========================================================= */
 
 /* SNSシェアボタンを非表示 */
 body.diary-post-page .page__share {
   display: none;
 }
-
-/* =========================================================
-   ORIGINAL FOOTER
-   ========================================================= */
 
 /* Minimal Mistakes 標準フッターを非表示 */
 body.diary-post-page .page__footer {
@@ -343,34 +362,78 @@ body.diary-post-page .page__footer {
 
 /* オリジナルフッター */
 body.diary-post-page .diary-post-footer {
+  display: block;
+  position: relative;
+  float: none;
+  clear: both;
+
   width: 100%;
   max-width: 780px;
+  min-width: 0;
   margin: 32px auto 0;
   padding: 12px 4px 4px;
+  box-sizing: border-box;
+
   border-top: 1px solid var(--line);
   color: var(--muted);
+  background: transparent;
+
   font-family: "Caveat", "Zen Maru Gothic", sans-serif;
   font-size: 11px;
   letter-spacing: .08em;
 }
 
-/* 上段 */
-.diary-post-footer-top {
+/* 上段：コピーライトとページ番号 */
+body.diary-post-page .diary-post-footer-top {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
   gap: 12px;
 }
 
-.diary-post-footer-top span:last-child {
+body.diary-post-page .diary-post-footer-top span {
+  display: inline-block;
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+body.diary-post-page .diary-post-footer-top span:last-child {
   color: var(--blue-deep);
   font-weight: 700;
 }
 
-/* 下段 */
-.diary-post-footer-bottom {
+/* 下段：Powered by */
+body.diary-post-page .diary-post-footer-bottom {
+  display: block;
+  width: 100%;
   margin-top: 5px;
-  font-size: 10px;
   text-align: right;
+  font-size: 10px;
   letter-spacing: .04em;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  body.diary-post-page #main {
+    padding: 20px 12px;
+  }
+
+  body.diary-post-page article.page {
+    padding: 24px 17px 20px;
+  }
+
+  body.diary-post-page .pagination {
+    gap: 8px;
+  }
+
+  body.diary-post-page .pagination .pagination--pager {
+    flex-basis: 50%;
+    padding: 7px 8px;
+    font-size: 10px;
+  }
 }
