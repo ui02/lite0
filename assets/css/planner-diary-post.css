@@ -405,6 +405,17 @@ body.diary-post-page article.page .diary-post-info {
   border-bottom: 0px solid #dce8eb;
 }
 
+/* 各項目の配置をリセット */
+body.diary-post-page article.page .diary-post-info p {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  width: auto;
+  float: none;
+  margin: 0;
+  padding: 0;
+}
+
 /* Tags: / Categories: とアイコンを非表示 */
 body.diary-post-page .diary-post-info .page__taxonomy strong {
   display: none;
@@ -501,19 +512,4 @@ body.diary-post-page .pagination .pagination--pager.disabled {
 /* SNSシェアボタンを非表示 */
 body.diary-post-page .page__share {
   display: none;
-}
-
-
-/* ---------------------------------------------------------
-   ETC.
-   --------------------------------------------------------- */
-/* 各項目の配置をリセット */
-body.diary-post-page article.page .diary-post-info p {
-  display: inline-flex;
-  flex: 0 0 auto;
-  align-items: center;
-  width: auto;
-  float: none;
-  margin: 0;
-  padding: 0;
 }
